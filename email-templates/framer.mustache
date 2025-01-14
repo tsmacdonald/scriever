@@ -1,0 +1,899 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" data-reactroot="">
+  <head>
+    <meta http-equiv="Content-Type" charSet="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="format-detection" content="telephone=no,address=no,email=no,date=no,url=no" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="supported-color-schemes" content="light dark" />
+    <style type="text/css">
+      :root {
+        color-scheme: light dark;
+        supported-color-schemes: light dark;
+      }
+    </style>
+    <title>What’s new: Powerful prototyping with sticky elements, more scrolling options, and key and gamepad support.</title>
+
+    <!--[if gte mso 9]>
+      <xml>
+         <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+         </o:OfficeDocumentSettings>
+      </xml>
+      <![endif]-->
+    <style type="text/css">
+      @font-face {
+        font-family: 'Inter';
+        src: url("https://fonts.gstatic.com/s/inter/v1/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hjp-Ek-_EeA.woff") format('woff');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Inter';
+        src: url("https://fonts.gstatic.com/s/inter/v1/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuI6fAZ9hjp-Ek-_EeA.woff") format('woff');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Inter';
+        src: url("https://fonts.gstatic.com/s/inter/v1/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGKYAZ9hjp-Ek-_EeA.woff") format('woff');
+        font-weight: 600;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Inter';
+        src: url("https://fonts.gstatic.com/s/inter/v1/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYAZ9hjp-Ek-_EeA.woff") format('woff');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Inter';
+        src: url("https://fonts.gstatic.com/s/inter/v3/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuDyYAZ9hjp-Ek-_EeA.woff") format('woff');
+        font-weight: 800;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Inter';
+        src: url("https://fonts.gstatic.com/s/inter/v3/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuBWYAZ9hjp-Ek-_EeA.woff") format('woff');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
+      html,
+      body {
+        margin: 0 auto !important;
+        height: 100% !important;
+        width: 100% !important;
+        font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+      }
+      body {
+        mso-line-height-rule: exactly;
+      }
+      * {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+      div[style*="margin: 16px 0"] {
+        margin: 0 !important;
+      }
+      table,
+      td {
+        mso-table-lspace: 0pt !important;
+        mso-table-rspace: 0pt !important;
+      }
+      table {
+        border-spacing: 0 !important;
+        border-collapse: collapse !important;
+        table-layout: fixed !important;
+        margin: 0 auto !important;
+      }
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+      h1,
+      h2,
+      h3,
+      div,
+      p,
+      img,
+      a,
+      li {
+        font-family: 'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif !important;
+      }
+      a[href^=tel] {
+        color: #AAA;
+        text-decoration: none;
+      }
+      .full {
+        max-width: 960px
+      }
+      .preheader {
+        display: none;
+        font-size: 1px;
+        line-height: 1px;
+        max-height: 0px;
+        max-width: 0px;
+        opacity: 0;
+        overflow: hidden;
+        mso-hide: all;
+        font-family: sans-serif;
+      }
+      img a+a {
+        margin-left: 10px !important;
+      }
+      a+a {
+        margin-left: 10px !important;
+      }
+      p a+a {
+        margin-left: 0 !important;
+      }
+      .button {
+        margin-top: 5px !important;
+        margin-bottom: 5px !important;
+      }
+      .mobile-banner {
+        display: none;
+      }
+      .mobile-spacer {
+        height: 60px;
+      }
+      .show-mobile {
+        display: none;
+      }
+      .block {
+        display: block;
+      }
+      .logo-dark {
+        display: block;
+      }
+      .logo-white {
+        display: none;
+      }
+      .dark .logo-text,
+      .dark .bg-image-text {
+        color: #FFFFFF !important;
+      }
+      .dark .logo-dark {
+        display: none;
+      }
+      .dark .logo-white {
+        display: block !important;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #111111 !important;
+        }
+        h1,
+        h2,
+        h3,
+        div,
+        p,
+        img,
+        li,
+        .logo-text {
+          color: #FFFFFF !important;
+        }
+        .container {
+          background: #111111 !important;
+        }
+        div.key {
+          color: #000000 !important;
+        }
+        .logo-dark {
+          display: none !important;
+          ;
+        }
+        .logo-white {
+          display: block !important;
+          ;
+        }
+        .bg-box {
+          background: #121212 !important;
+        }
+        .line {
+          color: #444444 !important;
+        }
+      }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+        .container {
+          min-width: 320px !important;
+        }
+      }
+      @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+        .container {
+          min-width: 375px !important;
+        }
+        .line {
+          padding: 40px 0 !important;
+        }
+      }
+      @media only screen and (min-device-width: 414px) {
+        .container {
+          min-width: 414px !important;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .container {
+          width: 100% !important;
+          margin: auto !important;
+        }
+        .stacked {
+          display: block !important;
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+        .stack {
+          display: block !important;
+          float: none !important;
+        }
+        .upsell,
+        .hero {
+          margin: 0 auto 20px auto !important;
+          width: 92% !important;
+        }
+        .mobile-banner {
+          display: block;
+        }
+        .mobile-spacer {
+          height: 40px;
+        }
+        .hide-mobile {
+          display: none;
+        }
+        .show-mobile {
+          display: block;
+        }
+        .bg-box {
+          padding: 40px !important;
+        }
+        h1 {
+          font-size: 38px !important;
+          line-height: 1.15em !important;
+        }
+        .button {
+          margin: 5px 0 !important;
+          width: 100% !important;
+        }
+      }
+    </style>
+
+    <!-- OUTLOOK START -->
+
+    <!--[if mso]>
+      <style>
+         h1, h2, h3, h4, div, p, img, a, li {
+         font-family: Arial, sans-serif !important;
+         }
+         h2 {
+         margin-top: 40px !important;
+         }
+      </style>
+      <![endif]-->
+
+    <!-- OUTLOOK END -->
+  </head>
+  <body class="" style="width:100%;margin:0;padding:30px 0px;text-size-adjust:100%">
+    <div>
+
+      <!--[if mso | IE]>
+         <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+               <td>
+                  <![endif]-->
+      <div class="preheader" style="font-size:0px;color:#FFFFFF;line-height:0px;display:none">Set up everything from keyboard and gamepad support to sticky headers and loading animations in the canvas with just a few clicks.</div>
+      <div class="preheader" style="font-size:0px;color:#FFFFFF;line-height:0px;display:none">
+        <div>&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;</div>
+      </div>
+      <table width="600" align="center" class="container" cellPadding="0" cellSpacing="0" border="0" borderRadius="0" valign="top" role="presentation">
+        <tbody>
+          <tr>
+            <td align="left" valign="top" style="padding:10px 40px">
+              <table width="100%" height="100%" cellPadding="0" cellSpacing="0" border="0" borderRadius="0" align="left" valign="top" role="presentation">
+                <tbody>
+                  <tr>
+                    <td align="left" valign="middle" style="width:32px;padding-bottom:10px"><a href="https://www.framer.com/?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline"><img class="logo" width="32" height="32" src="https://email.framercdn.com/images/logo-avatar@2x.png" /></a></td>
+                    <td align="left" valign="middle" style="padding-bottom:10px">
+                      <p><a href="https://www.framer.com/?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" class="logo-text" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:800;font-size:16px;line-height:34px;color:inherit;text-decoration:none;margin:0 0 0 8px !important">Framer</a></p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" style="padding:10px 40px">
+              <h1 style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:800;letter-spacing:-.03em;margin:0;width:90%;font-size:48px;line-height:1.15em;color:#000">What’s new in Framer this month</h1>
+            </td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" style="padding:10px 40px">
+              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:18px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0;text-align:left;color:#000">Even more realistic no-code interactions are possible this month in Framer. Set up everything from keyboard and gamepad support to sticky headers and loading animations on the canvas with just a few clicks.<br /><br />{{#if first_date_web}}<a href="https://framer.com/r/discord?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline">Join more than 5K Framer users on Discord</a> to get tips, ideas, and ask questions in our global community.{{else}}<a href="https://login.framer.com/sign-up?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline">Sign up free</a> to start prototyping in Framer and experience it for yourself.{{/if}}</p>
+            </td>
+          </tr>
+
+          <!--[if mso]>
+                        <table>
+                           <tr>
+                              <td height="30">
+                                 <![endif]-->
+          <tr>
+            <td align="left" valign="top" style="padding:0px">
+
+              <!--[if mso]>
+                                 <table>
+                                    <tr>
+                                       <td height="30">
+                                          <![endif]-->
+              <div style="height:30px"></div>
+
+              <!--[if mso]>
+                                       </td>
+                                    </tr>
+                                 </table>
+                                 <![endif]-->
+            </td>
+          </tr>
+
+          <!--[if mso]></td></tr>
+                        </table>
+                        <![endif]-->
+        </tbody>
+      </table>
+      <table width="680" align="center" class="container" cellPadding="0" cellSpacing="0" border="0" borderRadius="0" valign="top" role="presentation">
+        <tbody>
+          <tr>
+            <td align="left" valign="top" style="padding:0 20px">
+              <table cellPadding="0" cellSpacing="0" border="0" borderRadius="0" align="left" valign="top" width="100%" role="presentation">
+                <tbody>
+
+                  <!--[if mso]>
+                                    <table>
+                                       <tr>
+                                          <td height="10">
+                                             <![endif]-->
+                  <tr>
+                    <td align="left" valign="top" style="padding:0px">
+
+                      <!--[if mso]>
+                                             <table>
+                                                <tr>
+                                                   <td height="10">
+                                                      <![endif]-->
+                      <div style="height:10px"></div>
+
+                      <!--[if mso]>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                             <![endif]-->
+                    </td>
+                  </tr>
+
+                  <!--[if mso]></td></tr>
+                                    </table>
+                                    <![endif]-->
+                  <tr>
+                    <td class="bg-box" align="left" valign="top" style="padding:60px;border-radius:30px;background:#0099FF">
+                      <table cellPadding="0" cellSpacing="0" border="0" borderRadius="0" align="left" valign="top" width="100%" role="presentation">
+                        <tbody>
+                          <tr>
+                            <td align="left" valign="top" style="padding:0 0 10px">
+                              <h2 style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:800;font-size:24px;letter-spacing:-0.1px;color:#FFFFFF;text-rendering:optimizeLegibility;margin:0;padding:0">Poll: What do you want to read next?</h2>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:bold;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:20px 0 0;text-align:left;color:#FFFFFF">A. <a href="https://framerfeedback.typeform.com/to/WZC0IXJK?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021#email={{email}}&amp;date=March2021&amp;content=5%C2%A0Things%C2%A0to%C2%A0Avoid%C2%A0When%C2%A0Prototyping" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#FFFFFF;text-decoration:underline;font-weight:400">5 Things to Avoid When Prototyping</a></p>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:bold;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:10px 0 0;text-align:left;color:#FFFFFF">B. <a href="https://framerfeedback.typeform.com/to/WZC0IXJK?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021#email={{email}}&amp;date=March2021&amp;content=How%C2%A0to%C2%A0Create%C2%A0an%C2%A0Amazing%C2%A0Design%C2%A0Portfolio%C2%A0in%C2%A02021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#FFFFFF;text-decoration:underline;font-weight:400">How to Create an Amazing Design Portfolio in 2021</a></p>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:bold;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:10px 0 0;text-align:left;color:#FFFFFF">C. <a href="https://framerfeedback.typeform.com/to/WZC0IXJK?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021#email={{email}}&amp;date=March2021&amp;content=How%C2%A0to%C2%A0Successfully%C2%A0Use%C2%A0Photography%C2%A0in%C2%A0Your%C2%A0Designs" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#FFFFFF;text-decoration:underline;font-weight:400">How to Successfully Use Photography in Your Designs</a></p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!--[if mso]>
+                                    <table>
+                                       <tr>
+                                          <td height="10">
+                                             <![endif]-->
+                  <tr>
+                    <td align="left" valign="top" style="padding:0px">
+
+                      <!--[if mso]>
+                                             <table>
+                                                <tr>
+                                                   <td height="10">
+                                                      <![endif]-->
+                      <div style="height:10px"></div>
+
+                      <!--[if mso]>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                             <![endif]-->
+                    </td>
+                  </tr>
+
+                  <!--[if mso]></td></tr>
+                                    </table>
+                                    <![endif]-->
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table width="680" align="center" class="container" cellPadding="0" cellSpacing="0" border="0" borderRadius="0" valign="top" role="presentation">
+        <tbody>
+          <tr>
+            <td align="left" valign="top" style="padding:0 20px">
+              <table cellPadding="0" cellSpacing="0" border="0" borderRadius="0" align="left" valign="top" width="100%" role="presentation">
+                <tbody>
+
+                  <!--[if mso]>
+                                    <table>
+                                       <tr>
+                                          <td height="10">
+                                             <![endif]-->
+                  <tr>
+                    <td align="left" valign="top" style="padding:0px">
+
+                      <!--[if mso]>
+                                             <table>
+                                                <tr>
+                                                   <td height="10">
+                                                      <![endif]-->
+                      <div style="height:10px"></div>
+
+                      <!--[if mso]>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                             <![endif]-->
+                    </td>
+                  </tr>
+
+                  <!--[if mso]></td></tr>
+                                    </table>
+                                    <![endif]-->
+                  <tr>
+                    <td class="bg-box" align="left" valign="top" style="padding:60px;border-radius:30px;background:#FAFAFA">
+                      <table cellPadding="0" cellSpacing="0" border="0" borderRadius="0" align="left" valign="top" width="100%" role="presentation">
+                        <tbody>
+                          <tr>
+                            <td align="left" valign="top" style="padding:0 0 40px">
+                              <h2 style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:800;font-size:26px;line-height:26px;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0">Features</h2>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left" valign="top" style="padding:0">
+                              <a href="https://www.framer.com/updates/2021-03-16/?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline"><img alt="Hands showing video game controller in action" src="https://framer-69ddad7c5373.intercom-mail.com/i/o/312841638/53a92b5701de650506789ad6/Gamepad.png" width="520" class="hero" style="margin:0 0 40px;width:520;border-radius:16px;max-width:520px" /></a>
+                              <h2 style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:800;font-size:18px;line-height:18px;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0">Gamepad support</h2>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:15px 0 10px;text-align:left;color:#000">Connect the gamepad of your choice to your prototypes to create realistic game interfaces. </p>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0;text-align:left;color:#000"><a href="https://www.framer.com/updates/2021-03-16/?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline">See how it works</a></p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="line" align="left" valign="top" style="padding:60px 0">
+                              <div style="margin:0;padding:0;height:1px;width:100%;background:#eee"></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left" valign="top" style="padding:0">
+                              <a href="https://www.framer.com/updates/2021-03-09/?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline"><img alt="Sticky interactions panel in Framer" src="https://framer-69ddad7c5373.intercom-mail.com/i/o/315067993/06bb35f1d9c7e52759453008/%2401%402x.png" width="520" class="hero" style="margin:0 0 40px;width:520;border-radius:16px;max-width:520px" /></a>
+                              <h2 style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:800;font-size:18px;line-height:18px;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0">Sticky elements</h2>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:15px 0 10px;text-align:left;color:#000">Easily create elements that remain sticky when you scroll with new properties for the Scroll tool.</p>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0;text-align:left;color:#000"><a href="https://www.framer.com/updates/2021-03-09/?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline">Create sticky elements</a></p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="line" align="left" valign="top" style="padding:60px 0">
+                              <div style="margin:0;padding:0;height:1px;width:100%;background:#eee"></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left" valign="top" style="padding:0">
+                              <a href="https://www.framer.com/updates/2021-03-10/?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline"><img alt="Key and Gamepad option selected in Framer UI" src="https://framer-69ddad7c5373.intercom-mail.com/i/o/315066125/cda8910f560dad624aa57c3d/%24165%402x.png" width="520" class="hero" style="margin:0 0 40px;width:520;border-radius:16px;max-width:520px" /></a>
+                              <h2 style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:800;font-size:18px;line-height:18px;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0">Keyboard support</h2>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:15px 0 10px;text-align:left;color:#000">Control your prototypes with any keys on your keyboard to create native desktop experiences. </p>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0;text-align:left;color:#000"><a href="https://www.framer.com/updates/2021-03-10/?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline">Use your keyboard</a></p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="line" align="left" valign="top" style="padding:60px 0">
+                              <div style="margin:0;padding:0;height:1px;width:100%;background:#eee"></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left" valign="top" style="padding:0">
+                              <h2 style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:800;font-size:18px;line-height:28px;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0">💡 Framer pro tip: Setting device orientation</h2>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:15px 0 10px;text-align:left;color:#000">The device orientation in preview respects the orientation of your Screen on the canvas. You can even change the orientation from preview, too.</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="line" align="left" valign="top" style="padding:60px 0">
+                              <div style="margin:0;padding:0;height:1px;width:100%;background:#eee"></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left" valign="top" style="padding:0">
+                              <a href="https://www.framer.com/updates/2021-03-17/?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline"><img alt="Mobile phone prototype showing a gradual image transition" src="https://framer-69ddad7c5373.intercom-mail.com/i/o/315009905/d4f817d91cc8847de539f2d5/appear-delay.gif" width="520" class="hero" style="margin:0 0 40px;width:520;border-radius:16px;max-width:520px" /></a>
+                              <h2 style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:800;font-size:18px;line-height:18px;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0">Appear trigger and Delay property</h2>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:15px 0 10px;text-align:left;color:#000">Create sequenced animations and time-based transitions like loading screens and progress bars.</p>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0;text-align:left;color:#000"><a href="https://www.framer.com/updates/2021-03-17/?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline">Explore these settings</a></p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="line" align="left" valign="top" style="padding:60px 0">
+                              <div style="margin:0;padding:0;height:1px;width:100%;background:#eee"></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left" valign="top" style="padding:0">
+                              <h2 style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:800;font-size:18px;line-height:28px;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0">💡 Framer pro tip: Organize your previews</h2>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:15px 0 10px;text-align:left;color:#000">Set project thumbnails in the canvas to better organize the project previews in your Framer dashboard.</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="line" align="left" valign="top" style="padding:60px 0">
+                              <div style="margin:0;padding:0;height:1px;width:100%;background:#eee"></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left" valign="top" style="padding:0">
+                              <a href="https://framer.com/updates/2021/03/23?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline"><img alt="Framer UI showing highlighted Unlink option" src="https://framer-69ddad7c5373.intercom-mail.com/i/o/315705550/c139555b84ca53dd6983fbe3/copy-paste-unlink%402x.png" width="520" class="hero" style="margin:0 0 40px;width:520;border-radius:16px;max-width:520px" /></a>
+                              <h2 style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:800;font-size:18px;line-height:18px;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0">Component copy &amp; paste</h2>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:15px 0 10px;text-align:left;color:#000">Share components across projects and keep their interactions and Variants set. Need to make changes? Unlink to create a copy of the component that you can edit.</p>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0;text-align:left;color:#000"><a href="https://framer.com/updates/2021/03/23?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline">Try it out</a></p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!--[if mso]>
+                                    <table>
+                                       <tr>
+                                          <td height="10">
+                                             <![endif]-->
+                  <tr>
+                    <td align="left" valign="top" style="padding:0px">
+
+                      <!--[if mso]>
+                                             <table>
+                                                <tr>
+                                                   <td height="10">
+                                                      <![endif]-->
+                      <div style="height:10px"></div>
+
+                      <!--[if mso]>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                             <![endif]-->
+                    </td>
+                  </tr>
+
+                  <!--[if mso]></td></tr>
+                                    </table>
+                                    <![endif]-->
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table width="680" align="center" class="container" cellPadding="0" cellSpacing="0" border="0" borderRadius="0" valign="top" role="presentation">
+        <tbody>
+          <tr>
+            <td align="left" valign="top" style="padding:0 20px">
+              <table cellPadding="0" cellSpacing="0" border="0" borderRadius="0" align="left" valign="top" width="100%" role="presentation">
+                <tbody>
+
+                  <!--[if mso]>
+                                    <table>
+                                       <tr>
+                                          <td height="10">
+                                             <![endif]-->
+                  <tr>
+                    <td align="left" valign="top" style="padding:0px">
+
+                      <!--[if mso]>
+                                             <table>
+                                                <tr>
+                                                   <td height="10">
+                                                      <![endif]-->
+                      <div style="height:10px"></div>
+
+                      <!--[if mso]>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                             <![endif]-->
+                    </td>
+                  </tr>
+
+                  <!--[if mso]></td></tr>
+                                    </table>
+                                    <![endif]-->
+                  <tr>
+                    <td class="bg-box" align="left" valign="top" style="padding:60px;border-radius:30px;background:#FAFAFA">
+                      <table cellPadding="0" cellSpacing="0" border="0" borderRadius="0" align="left" valign="top" width="100%" role="presentation">
+                        <tbody>
+                          <tr>
+                            <td align="left" valign="top" style="padding:0 0 40px">
+                              <h2 style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:800;font-size:26px;line-height:26px;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0">Resources</h2>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left" valign="top" style="padding:0">
+                              <a href="https://www.framer.com/blog/posts/case-study-messenger/?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline"><img alt="Facebook Messenger prototypes on mobile phones" src="https://cdn.sanity.io/images/oneb1r22/production/f57a8ab5c8aae6e808bde9775746fb0f8592f043-6450x2820.png" width="520" class="hero" style="margin:0 0 40px;width:520;border-radius:16px;max-width:520px" /></a>
+                              <h2 style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:800;font-size:18px;line-height:18px;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0">Messenger case study</h2>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:15px 0 10px;text-align:left;color:#000">Learn how the team at Facebook Messenger was able to validate a new feature by conducting user research with a realistic Framer prototype. </p>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0;text-align:left;color:#000"><a href="https://www.framer.com/blog/posts/case-study-messenger/?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline">See how they brought it to life</a></p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="line" align="left" valign="top" style="padding:60px 0">
+                              <div style="margin:0;padding:0;height:1px;width:100%;background:#eee"></div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left" valign="top" style="padding:0">
+                              <a href="https://www.framer.com/blog/posts/unique-scrolling-interactions/?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline"><img alt="Phone with scrolling demonstrated" src="https://framer-69ddad7c5373.intercom-mail.com/i/o/315026411/372afab0de08375c3d50b3ea/test.gif" width="520" class="hero" style="margin:0 0 40px;width:520;border-radius:16px;max-width:520px" /></a>
+                              <h2 style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:800;font-size:18px;line-height:18px;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0">Create unique scrolling interactions in Framer</h2>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:15px 0 10px;text-align:left;color:#000">Explore this guide to learn about different scroll interactions that are possible without code.</p>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0;text-align:left;color:#000"><a href="https://www.framer.com/blog/posts/unique-scrolling-interactions/?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline">Learn how to do it yourself</a></p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!--[if mso]>
+                                    <table>
+                                       <tr>
+                                          <td height="10">
+                                             <![endif]-->
+                  <tr>
+                    <td align="left" valign="top" style="padding:0px">
+
+                      <!--[if mso]>
+                                             <table>
+                                                <tr>
+                                                   <td height="10">
+                                                      <![endif]-->
+                      <div style="height:10px"></div>
+
+                      <!--[if mso]>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                             <![endif]-->
+                    </td>
+                  </tr>
+
+                  <!--[if mso]></td></tr>
+                                    </table>
+                                    <![endif]-->
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table width="680" align="center" class="container" cellPadding="0" cellSpacing="0" border="0" borderRadius="0" valign="top" role="presentation">
+        <tbody>
+          <tr>
+            <td align="left" valign="top" style="padding:0 20px">
+              <table cellPadding="0" cellSpacing="0" border="0" borderRadius="0" align="left" valign="top" width="100%" role="presentation">
+                <tbody>
+
+                  <!--[if mso]>
+                                    <table>
+                                       <tr>
+                                          <td height="10">
+                                             <![endif]-->
+                  <tr>
+                    <td align="left" valign="top" style="padding:0px">
+
+                      <!--[if mso]>
+                                             <table>
+                                                <tr>
+                                                   <td height="10">
+                                                      <![endif]-->
+                      <div style="height:10px"></div>
+
+                      <!--[if mso]>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                             <![endif]-->
+                    </td>
+                  </tr>
+
+                  <!--[if mso]></td></tr>
+                                    </table>
+                                    <![endif]-->
+                  <tr>
+                    <td class="bg-box" align="left" valign="top" style="padding:60px;border-radius:30px;background:#FAFAFA">
+                      <table cellPadding="0" cellSpacing="0" border="0" borderRadius="0" align="left" valign="top" width="100%" role="presentation">
+                        <tbody>
+                          <tr>
+                            <td align="left" valign="top" style="padding:0 0 20px">
+                              <h2 style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:800;font-size:26px;line-height:26px;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0">What caught our eye</h2>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="left" valign="top" style="padding:0">
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0 0 10px;text-align:left;color:#000">Tools, tips, and inspiration to become better dreamers, builders, and designers. Here’s what got our team thinking this month.</p>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:40px 0 10px;text-align:left;color:#000">🎛 <a href="https://www.hackster.io/lennart-hennigs/ux-prototyping-platform-for-iot-hardware-projects-52d9e7?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline">A UX Prototyping Platform for IoT</a> to help you create UI prototypes combining hardware and software interface elements</p>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:20px 0 10px;text-align:left;color:#000">💡 <a href="https://www.andy.works/?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline">No More Boring Apps</a> to give you a bold, inspiring new perspective on the apps you know and use daily</p>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:20px 0 10px;text-align:left;color:#000">📎 <a href="https://medium.com/swlh/introducing-paperclip-f392a42311d6?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline">A hybrid tool between design and code</a> that brings web development closer to a designer-like experience</p>
+                              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:15px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:20px 0 10px;text-align:left;color:#000">🎳 <a href="https://gamesnacks.com/embed/?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline">Gamesnacks, HTML5 games</a> to give you a brain break and remind you of the good old days of Flash game sites</p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!--[if mso]>
+                                    <table>
+                                       <tr>
+                                          <td height="10">
+                                             <![endif]-->
+                  <tr>
+                    <td align="left" valign="top" style="padding:0px">
+
+                      <!--[if mso]>
+                                             <table>
+                                                <tr>
+                                                   <td height="10">
+                                                      <![endif]-->
+                      <div style="height:10px"></div>
+
+                      <!--[if mso]>
+                                                   </td>
+                                                </tr>
+                                             </table>
+                                             <![endif]-->
+                    </td>
+                  </tr>
+
+                  <!--[if mso]></td></tr>
+                                    </table>
+                                    <![endif]-->
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <table width="600" align="center" class="container" cellPadding="0" cellSpacing="0" border="0" borderRadius="0" valign="top" role="presentation">
+        <tbody>
+
+          <!--[if mso]>
+                        <table>
+                           <tr>
+                              <td height="40">
+                                 <![endif]-->
+          <tr>
+            <td align="left" valign="top" style="padding:0px">
+
+              <!--[if mso]>
+                                 <table>
+                                    <tr>
+                                       <td height="40">
+                                          <![endif]-->
+              <div style="height:40px"></div>
+
+              <!--[if mso]>
+                                       </td>
+                                    </tr>
+                                 </table>
+                                 <![endif]-->
+            </td>
+          </tr>
+
+          <!--[if mso]></td></tr>
+                        </table>
+                        <![endif]-->
+          <tr>
+            <td align="left" valign="top" style="padding:10px 40px">
+              <p style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;font-weight:400;font-size:18px;line-height:1.6em;letter-spacing:-0.1px;text-rendering:optimizeLegibility;margin:0;text-align:left;color:#000">Ready to put your prototyping skills to use? {{#if first_date_web}}Jump back into Framer to start designing or <a href="https://framer.com/r/discord?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;text-decoration:underline">join the Framer community on Discord</a> to get tips, ideas, and ask questions in our global community.<br /><br />{{else}}Try Framer for free to build production ready components on the canvas—no code skills required.<br /><br />{{/if}}</p>
+              {{#if first_date_web}}
+
+                <!--[if mso]>
+                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://framer.com/projects?utm_source=iterable&utm_medium=email&utm_campaign=FR-owned-product-update&utm_content=march-2021" style="height:46px;v-text-anchor:middle;width:290;" arcsize="50%" strokecolor="#0099FF" fillcolor="#0099FF">
+                                 <w:anchorlock/>
+                                 <center>
+                                    <![endif]-->
+                <a href="https://framer.com/projects?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" class="button" style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;border-radius:40px;display:inline-block;font-size:18px;font-weight:600;text-decoration:none;vertical-align:middle;line-height:50px;text-size-adjust:none;text-align:center;width:290px;border:1px solid #0099FF;background-color:#0099FF;color:#FFFFFF">Keep prototyping in Framer</a>
+
+                <!--[if mso]>
+                                 </center>
+                              </v:roundrect>
+                              <![endif]-->
+              {{else}}
+
+                <!--[if mso]>
+                              <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://login.framer.com/sign-up?utm_source=iterable&utm_medium=email&utm_campaign=FR-owned-product-update&utm_content=march-2021" style="height:46px;v-text-anchor:middle;width:180;" arcsize="50%" strokecolor="#0099FF" fillcolor="#0099FF">
+                                 <w:anchorlock/>
+                                 <center>
+                                    <![endif]-->
+                <a href="https://login.framer.com/sign-up?utm_source=iterable&amp;utm_medium=email&amp;utm_campaign=FR-owned-product-update&amp;utm_content=march-2021" target="_blank" class="button" style="font-family:'Inter', 'HelveticaNeue', Helvetica, Arial, sans-serif;border-radius:40px;display:inline-block;font-size:18px;font-weight:600;text-decoration:none;vertical-align:middle;line-height:50px;text-size-adjust:none;text-align:center;width:180px;border:1px solid #0099FF;background-color:#0099FF;color:#FFFFFF">Try Framer free</a>
+
+                <!--[if mso]>
+                                 </center>
+                              </v:roundrect>
+                              <![endif]-->
+              {{/if}}
+            </td>
+          </tr>
+
+          <!--[if mso]>
+                        <table>
+                           <tr>
+                              <td height="30">
+                                 <![endif]-->
+          <tr>
+            <td align="left" valign="top" style="padding:0px">
+
+              <!--[if mso]>
+                                 <table>
+                                    <tr>
+                                       <td height="30">
+                                          <![endif]-->
+              <div style="height:30px"></div>
+
+              <!--[if mso]>
+                                       </td>
+                                    </tr>
+                                 </table>
+                                 <![endif]-->
+            </td>
+          </tr>
+
+          <!--[if mso]></td></tr>
+                        </table>
+                        <![endif]-->
+          <tr>
+            <td align="left" valign="top" style="padding:10px 40px">
+
+              <!--[if mso]>
+                              <table>
+                                 <tr>
+                                    <td height="60"></td>
+                                 </tr>
+                              </table>
+                              <![endif]-->
+              <div style="padding:60px 0 30px">
+                <div style="padding:0 0 20px;margin-bottom:20px;border-bottom:1px solid #eee">
+                  <p style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:400;font-size:14px;line-height:20px;letter-spacing:-0.1px;color:#AAAAAA;text-rendering:optimizeLegibility;margin:0">Was this email helpful? <a href="https://framerfeedback.typeform.com/to/zRxPb489#sentiment=positive&campaign={{campaignId}}&email={{email}}" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;font-weight:400;text-decoration:none">👍</a> or <a href="https://framerfeedback.typeform.com/to/zRxPb489#sentiment=negative&campaign={{campaignID}}&email={{email}}" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF;font-weight:400;text-decoration:none">👎</a></p>
+                </div>
+                <p style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:400;font-size:14px;line-height:20px;letter-spacing:-0.1px;color:#AAAAAA;text-rendering:optimizeLegibility;margin:0">Framer B.V., Singel 258, 1016AB Amsterdam, Netherlands</p>
+                <p style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;font-weight:400;font-size:14px;line-height:20px;letter-spacing:-0.1px;color:#AAAAAA;text-rendering:optimizeLegibility;margin:0"><a href="{{viewInBrowserUrl}}" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF">See the web version</a> of this email<br /><a href="{{unsubscribeMessageTypeUrl}}" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF">Opt out</a> of What’s New emails or <a href="{{unsubscribeUrl}}" style="font-family:'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#0099FF">unsubscribe</a> from all Framer messages</p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!--[if mso | IE]>
+               </td>
+            </tr>
+         </table>
+         <![endif]-->
+    </div>
+  </body>
+</html>
