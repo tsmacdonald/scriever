@@ -1,0 +1,4 @@
+SCRIEVER_GOOGLE_KEY='amazing-newsletter.json'
+SCRIEVER_TEMPLATE='simple.mustache'
+SCRIEVER_SPREADSHEET='1Ab-cdef-etc'
+SCRIEVER_EMAIL_INDEX=2

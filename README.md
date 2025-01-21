@@ -13,10 +13,7 @@ posts
 ├── 01-my-great-first-post
 │   ├── title.md
 │   ├── header.md
-│   ├── body-1.md
-│   ├── body-2.md
-│   ├── body-3.md
-│   ├── [...]
+│   ├── body.md
 │   └── footer.md
 ├── 02-my-second-brilliant-contribution
 │   └── [...].md

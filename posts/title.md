@@ -1,3 +1,0 @@
-# Hello world!
-
-*oh boy*
