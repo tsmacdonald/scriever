@@ -1,5 +1,6 @@
 require 'dotenv/load'
 require 'google_drive'
+require "mailersend-ruby"
 require 'mustache'
 require 'redcarpet'
 
@@ -82,23 +83,61 @@ class Newsletter
     @template = template || ENV['SCRIEVER_TEMPLATE']
     @spreadsheet_id = ENV['SCRIEVER_SPREADSHEET']
     @email_index = ENV['SCRIEVER_EMAIL_INDEX']
+    @mailersend_token = ENV['SCRIEVER_MAILERSEND_TOKEN']
+    @from_address = ENV['SCRIEVER_FROM_ADDRESS']
+    @from_name = ENV['SCRIEVER_FROM_NAME']
+  end
+
+  def ms_client
+    @ms_client ||= Mailersend::Client.new(@mailersend_token)
   end
 
   def send!(dry_run = true)
-    emails = GoogleEmailList.new(@google_key, @email_index, @spreadsheet_id).subscribed_emails
+    # emails = GoogleEmailList.new(@google_key, @email_index, @spreadsheet_id).subscribed_emails
+    emails = ['mailersend@tsmacdonald.com']
     msg = EmailTemplate.new(@template).render_post(@post_dir)
     if dry_run
       spacer = '-' * 80
       puts "Sending the following email:\n#{spacer}\n#{msg}\n#{spacer}\nto:\n#{emails.join(',')}"
     else
-      puts 'DOING IT FOR REAL!!!!'
+      ms_bulk_email = Mailersend::BulkEmail.new(ms_client)
+
+      ms_bulk_email.messages = emails.map do |to_email|
+        puts "Preparing an email to #{to_email}"
+        {
+          'from' => { 'email' => @from_address, 'name' => @from_name },
+          'to' => [{ 'email' => to_email }],
+          'subject' => 'Hello world!',
+          # TODO: 'text' =>
+          'template_id' => 'k68zxl2qvy3lj905',
+          'personalization' => [
+            {
+              'email' => to_email,
+              'data' => {
+                'account_name' => 'Tim Macdonald'
+              }
+            }
+          ]
+        }
+      end
+      puts 'SENDING AN EMAIL!!!'
+      puts ms_bulk_email.messages
+      response = ms_bulk_email.send
+      puts "Response: #{response}"
+      puts 'status:'
+      puts status(response['bulk_email_id']).body
     end
+  end
+
+  def status(bulk_email_id)
+    Mailersend::BulkEmail.new(ms_client).get_bulk_status(bulk_email_id:)
   end
 end
 
 if __FILE__ == $PROGRAM_NAME
   post_dir = ARGV.first || (raise 'Please specify a post to send')
   template = ARGV[1]
+  dry_run = (ARGV[2] != 'yes-i-really-want-to-send-an-email')
 
-  Newsletter.new(post_dir, template).send!
+  Newsletter.new(post_dir, template).send!(dry_run)
 end
