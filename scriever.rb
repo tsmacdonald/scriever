@@ -1,8 +1,6 @@
 require 'dotenv/load'
 require 'google_drive'
 require "mailersend-ruby"
-require 'mustache'
-require 'redcarpet'
 
 class GoogleEmailList
   def initialize(google_keyfile, email_index, spreadsheet_id)
@@ -26,63 +24,14 @@ class GoogleEmailList
   end
 end
 
-class EmailTemplate < Mustache
-  def initialize(template)
-    super
-    self.template_file = File.join(__dir__, 'email-templates', template)
-  end
-
-  def render_post(post_dir)
-    @post_dir = post_dir
-    render
-  end
-
-  def _md_renderer
-    @md_renderer ||= Redcarpet::Markdown.new(Redcarpet::Render::HTML.new)
-  end
-
-  def _file_contents(filename)
-    raise 'Post dir not set' unless @post_dir
-
-    File.open(File.join(@post_dir, filename), &:read)
-  end
-
-  def _to_html(extension, contents)
-    if extension == '.md'
-      _md_renderer.render(contents.strip)
-    else
-      contents
-    end
-  end
-
-  def _read_from_file(filename)
-    _to_html(File.extname(filename), _file_contents(filename))
-  end
-
-  def title
-    _read_from_file('title.txt')
-  end
-
-  def header
-    _read_from_file('header.md')
-  end
-
-  def body
-    _read_from_file('body.md')
-  end
-
-  def footer
-    _read_from_file('footer.md')
-  end
-end
-
 class Newsletter
-  def initialize(post_dir, template = nil)
-    @post_dir = post_dir
-    @google_key = ENV['SCRIEVER_GOOGLE_KEY'] || File.join('.', 'google-service-account.json')
-    @template = template || ENV['SCRIEVER_TEMPLATE']
-    @spreadsheet_id = ENV['SCRIEVER_SPREADSHEET']
-    @email_index = ENV['SCRIEVER_EMAIL_INDEX']
+  def initialize(template_id)
+    google_key = ENV['SCRIEVER_GOOGLE_KEY'] || File.join('.', 'google-service-account.json')
+    email_index = ENV['SCRIEVER_EMAIL_INDEX']
+    spreadsheet_id = ENV['SCRIEVER_SPREADSHEET']
+    @email_list = GoogleEmailList.new(google_key, email_index, spreadsheet_id)
+
+    @template_id = template_id
     @mailersend_token = ENV['SCRIEVER_MAILERSEND_TOKEN']
     @from_address = ENV['SCRIEVER_FROM_ADDRESS']
     @from_name = ENV['SCRIEVER_FROM_NAME']
@@ -92,52 +41,54 @@ class Newsletter
     @ms_client ||= Mailersend::Client.new(@mailersend_token)
   end
 
-  def send!(dry_run = true)
-    # emails = GoogleEmailList.new(@google_key, @email_index, @spreadsheet_id).subscribed_emails
-    emails = ['mailersend@tsmacdonald.com']
-    msg = EmailTemplate.new(@template).render_post(@post_dir)
-    if dry_run
-      spacer = '-' * 80
-      puts "Sending the following email:\n#{spacer}\n#{msg}\n#{spacer}\nto:\n#{emails.join(',')}"
-    else
-      ms_bulk_email = Mailersend::BulkEmail.new(ms_client)
+  def send!(dry_run)
+    emails = dry_run ? [ENV['SCRIEVER_TEST_EMAIL']] : @email_list.subscribed_emails
 
-      ms_bulk_email.messages = emails.map do |to_email|
-        puts "Preparing an email to #{to_email}"
-        {
-          'from' => { 'email' => @from_address, 'name' => @from_name },
-          'to' => [{ 'email' => to_email }],
-          'subject' => 'Hello world!',
-          # TODO: 'text' =>
-          'template_id' => 'k68zxl2qvy3lj905',
-          'personalization' => [
-            {
-              'email' => to_email,
-              'data' => {
-                'account_name' => 'Tim Macdonald'
-              }
-            }
-          ]
-        }
-      end
-      puts 'SENDING AN EMAIL!!!'
-      puts ms_bulk_email.messages
-      response = ms_bulk_email.send
-      puts "Response: #{response}"
-      puts 'status:'
-      puts status(response['bulk_email_id']).body
+    puts "Preparing to send an email to #{emails.count} emails, starting with #{emails.first}"
+    puts 'Continue? (yes/no)'
+    if STDIN.gets.chomp.downcase != 'yes'
+      puts 'Aborting'
+      return
     end
+
+    puts 'Subject:'
+    subject = STDIN.gets.chomp
+
+    ms_bulk_email = Mailersend::BulkEmail.new(ms_client)
+    ms_bulk_email.messages = emails.map do |to_email|
+      {
+        'from' => { 'email' => @from_address,
+                    'name' => @from_name },
+        'to' => [{ 'email' => to_email }],
+        'subject' => subject,
+        'template_id' => @template_id,
+        'personalization' => [
+          {
+            'email' => to_email,
+            'data' => {
+              'account_name' => 'Tim Macdonald'
+            }
+          }
+        ]
+      }
+    end
+    response = ms_bulk_email.send
+    puts response
+    r_id = response['bulk_email_id']
+    puts "Sent! (#{r_id})"
+    status(r_id)
   end
 
   def status(bulk_email_id)
-    Mailersend::BulkEmail.new(ms_client).get_bulk_status(bulk_email_id:)
+    Mailersend::BulkEmail.new(ms_client).get_bulk_status(bulk_email_id:).body.tap do |b|
+      puts b
+    end
   end
 end
 
 if __FILE__ == $PROGRAM_NAME
-  post_dir = ARGV.first || (raise 'Please specify a post to send')
-  template = ARGV[1]
-  dry_run = (ARGV[2] != 'yes-i-really-want-to-send-an-email')
+  template_id = ARGV.first || (raise 'Please specify a template_id')
+  dry_run = (ARGV[1] != 'yes-i-really-want-to-send-an-email')
 
-  Newsletter.new(post_dir, template).send!(dry_run)
+  Newsletter.new(template_id).send!(dry_run)
 end
